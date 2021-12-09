@@ -1,0 +1,39 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+html, body {
+    background-color: #f6f6f9;
+    height: 100%;
+}
+
+.sidebar {
+    width: 30%;
+    height: 100%;
+    background-color: #eaeaf4;
+}
+
+.form-container-login {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.form-container-login {
+    display: flex;
+}
+
+.logo-chamada-login{
+    width: 60%;
+}
+
+.form-login{
+    width: 60%;
+}
