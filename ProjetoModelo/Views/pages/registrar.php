@@ -24,12 +24,14 @@
         </div>
 
         <div class="form-login">
+            <h3>Crie sua conta!</h3>
             <form method="post">
-                <input type="text" name="login" placeholder="login">
-                <input type="password" name="senha" placeholder="senha">
-                <input type="submit" value="Logar!">
+                <input type="text" name="nome" placeholder="Nome completo">
+                <input type="text" name="email" placeholder="E-mail">
+                <input type="password" name="senha" placeholder="Senha">
+                <input type="submit" value="Criar Conta!">
+                <input type="hidden" name="registrar" value="registrar">
             </form>
-            <p> <a href="<?php echo INCLUDE_PATH ?>registrar"> Criar Conta</a> </p>
         </div>
     </div>
 </body>
