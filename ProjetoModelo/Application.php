@@ -11,8 +11,6 @@
 
 			$url = explode('/', @$_GET['url']);
 
-			// var_dump($url[0]);
-
 			if($url[0] == ''){
 				$loadName.='Home';
 			}
@@ -28,7 +26,6 @@
 				include("Views/pages/404.php");
 				die();
 			}
-
 		}
 
 		public function run(){

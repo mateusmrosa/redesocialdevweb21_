@@ -24,17 +24,27 @@ class RegistrarController{
         }
         else{
             $senha = \ProjetoModelo\Bcrypt::hash($senha);
-            $registro = \ProjetoModelo\MySql::connect()->prepare("INSERT INTO usuarios VALUES (null, ?,?,?)");
-            $registro->execute(array($nome, $email, $senha));
-      
-            \ProjetoModelo\Utilidades::alerta('Registrado com sucesso!');
+           
+            $dados = array(
+                "nome" => $nome,
+                "email" => $email,
+                "senha" => $senha
+            );
+
+            $gravar = \ProjetoModelo\Models\UsuariosModel::gravar($dados);
+
+            if($gravar){
+                \ProjetoModelo\Utilidades::alerta('Registrado com sucesso!');
+                \ProjetoModelo\Utilidades::redirect(INCLUDE_PATH);
+            }
+            else
+                \ProjetoModelo\Utilidades::alerta('Erro ao registrar usuário!');
+
             \ProjetoModelo\Utilidades::redirect(INCLUDE_PATH);
         }
 
     }
-
-        \ProjetoModelo\Views\MainView::render('registrar');
-        
+        \ProjetoModelo\Views\MainView::render('registrar');   
     }
 }
 

@@ -19,7 +19,7 @@
         <div class="logo-chamada-login">
 
             <img src="<?php echo INCLUDE_PATH_STATIC ?>images/logo.svg" alt="Logo Rede Social" width="100" heigth="100">
-            <p>Conecte-se com seus amigos e expanda seus aprendizados com a rede social Danki Code</p>
+            <p>Conecte-se com seus amigos e expanda seus aprendizados com a rede social que ainda não tem nome =) kkkkk</p>
 
         </div>
 
